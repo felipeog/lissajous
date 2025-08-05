@@ -94,7 +94,6 @@ function drawBackground() {
   const radius = 8;
 
   ctx.save();
-  ctx.lineWidth = 1;
   ctx.fillStyle =
     `rgb(` +
     `${state.background.r},` +
@@ -104,7 +103,6 @@ function drawBackground() {
   ctx.beginPath();
   ctx.roundRect(x, y, width, height, radius);
   ctx.fill();
-  ctx.stroke();
   ctx.restore();
 }
 
