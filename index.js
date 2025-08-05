@@ -1,5 +1,3 @@
-// https://en.wikipedia.org/wiki/Lissajous_curve
-
 import lilGui from "https://esm.sh/lil-gui@0.17.0";
 
 // =============================================================================
