@@ -68,8 +68,8 @@ gui
   .min(1)
   .step(1)
   .onChange(() => (aOverBOutput.textContent = state.a / state.b));
-gui.add(state, "pointsCount").name("Points count").min(10).step(1);
-gui.add(state, "duration").name("Duration (ms)").min(1_000).step(1);
+gui.add(state, "pointsCount").name("Points count").min(10).step(10);
+gui.add(state, "duration").name("Duration (ms)").min(1_000).step(100);
 gui.add(state, "direction", ["left", "right"]).name("Direction");
 gui.addColor(state, "background", 255).name("Background").listen();
 gui.addColor(state, "foreground", 255).name("Foreground").listen();
@@ -111,7 +111,7 @@ function drawCurve(timestamp) {
   const angle = durationIndex * TAU;
   const d = TAU * durationIndex; // animation offset
 
-  dOutput.textContent = `${(d / Math.PI).toFixed(4)} π`;
+  dOutput.textContent = (d / Math.PI).toFixed(4);
 
   let firstPoint;
   let previousPoint;
